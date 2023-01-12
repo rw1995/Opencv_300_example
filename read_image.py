@@ -48,7 +48,7 @@ def imwrite_img(img_arr, save_path):
 # ToDo: 图像的直接拼接，后续需要做
 def mosaick_multi_img(img_1, img_2):
 
-    img_stack = np.stack((img_1, img_2))
+    img_stack = np.hstack((img_1, img_2))
     cv.imshow('demo', img_stack)
     cv.waitKey(0)
 
@@ -113,3 +113,5 @@ if __name__ == "__main__":
     # split_img(img_arr)
     # bImg, g_Img, r_Img = cv.split(img_arr)
     # merge_img(bImg, g_Img, r_Img)
+
+    mosaick_multi_img(img_arr, img_arr)
